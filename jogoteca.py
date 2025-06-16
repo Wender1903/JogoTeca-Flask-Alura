@@ -1,8 +1,8 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route('/inicio')
 def index():
-    return '<h2>Olá Mundo!</h2>'
-app.run()
+    return render_template('lista.html')
+app.run(host='0.0.0.0', port=8080)
